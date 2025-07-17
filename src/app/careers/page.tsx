@@ -22,6 +22,34 @@ export default function Careers() {
 
   const positions = [
     {
+      id: 'cv-intern',
+      title: 'Computer Vision Internship',
+      type: 'Internship',
+      location: 'Tokyo / Remote',
+      description: 'Join Shanda Tokyo AI Lab to explore cutting-edge rendering and video generation research. Develop generative models for visual content creation, including human motion, scene rendering, and diffusion-based video synthesis.',
+      responsibilities: [
+        'Research and develop neural rendering, video generation, and motion synthesis models',
+        'Train and fine-tune diffusion models for 2D/3D motion and scene generation',
+        'Design pipelines for generating synthetic training data (video, motion, multi-view images)',
+        'Optimize inference speed and visual quality for real-time generation',
+        'Collaborate with researchers and engineers on generative CV projects'
+      ],
+      requirements: [
+        'Master\'s or PhD student in Computer Vision, Computer Graphics, or related field',
+        'Strong foundation in deep learning and generative models (Diffusion, GANs, Transformers)',
+        'Proficient in PyTorch and familiar with 3D graphics libraries (PyTorch3D, Open3D, Blender APIs)',
+        'Ability to independently implement and evaluate academic papers',
+        'Strong communication skills in Chinese or English'
+      ],
+      preferred: [
+        'Publications in top-tier CV/Graphics conferences (CVPR, ICCV, NeurIPS, SIGGRAPH)',
+        'Experience in training video or motion generation models',
+        'Familiar with 3D motion datasets (Human3.6M, AMASS, Mixamo) or synthetic rendering pipelines',
+        'Familiarity with GPU optimization and multi-GPU training setups'
+      ],
+      applicationEmail: 'hr_jp@shanda.com',
+    },
+    {
       id: 'intern',
       title: 'Speech Internship',
       type: 'Internship',
@@ -46,8 +74,8 @@ export default function Careers() {
       applicationEmail: 'hr_jp@shanda.com',
     },
     {
-      id: 'npc-intern',
-      title: 'NPC Internship',
+      id: 'agent-intern',
+      title: 'Agent Internship',
       type: 'Internship',
       location: 'Tokyo / Remote',
       description: 'Join our research team to build next-generation intelligent NPCs with personalized behavior and learning capabilities. Using reinforcement learning (RL), RLHF, and RLAIF techniques, you\'ll develop AI agents that continuously evolve through dialogue and self-exploration.',
