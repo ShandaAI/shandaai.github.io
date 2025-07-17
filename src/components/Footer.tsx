@@ -65,11 +65,11 @@ const Footer = ({ onContactClick }: FooterProps) => {
               </li>
               <li>
                 <a 
-                  href="mailto:research.tokyo@shanda.com" 
+                  href="mailto:hr_jp@shanda.com" 
                   className="text-gray-400 hover:text-cyber-blue transition-colors text-sm flex items-center space-x-1"
                 >
                   <Mail size={14} />
-                  <span>research.tokyo@shanda.com</span>
+                  <span>hr_jp@shanda.com</span>
                 </a>
               </li>
             </ul>

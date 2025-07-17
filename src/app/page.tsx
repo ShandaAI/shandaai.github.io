@@ -75,7 +75,7 @@ export default function Home() {
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
               Shanda AI Research Tokyo is a cutting-edge research institution 
-              dedicated to achieving human-AI co-evolution and AI self-awareness
+              dedicated to achieving interactive AI with self-awareness.
             </p>
                          <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button 

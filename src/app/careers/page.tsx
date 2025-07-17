@@ -14,10 +14,7 @@ import {
   Mail, 
   FileText,
   Briefcase,
-  Target,
-  Lightbulb,
-  Star,
-  Gift
+  Star
 } from 'lucide-react'
 
 export default function Careers() {
@@ -26,10 +23,9 @@ export default function Careers() {
   const positions = [
     {
       id: 'intern',
-      title: 'Intern',
+      title: 'Speech Internship',
       type: 'Internship',
       location: 'Remote / Hybrid',
-      salary: 'Up to ¥500,000/month (based on skills and experience)',
       description: 'Join Shanda Tokyo AI Lab to participate in speech generation models and LLM reasoning research, contributing to next-generation generative AI systems.',
       responsibilities: [
         'Generative Speech-to-Speech model research and training',
@@ -47,40 +43,33 @@ export default function Careers() {
         'Publications in top NLP/Speech conferences',
         'Practical large model training/tuning experience'
       ],
-      applicationEmail: 'hr-jp@shanda.com',
+      applicationEmail: 'hr_jp@shanda.com',
     },
     {
       id: 'npc-intern',
-      title: 'Intelligent NPC Research Internship',
+      title: 'NPC Internship',
       type: 'Internship',
       location: 'Tokyo / Remote',
-      salary: 'Up to ¥500,000/month (based on skills and experience)',
-      description: 'We specialize in building next-generation intelligent NPCs with personalized behavior and learning capabilities. Through techniques such as reinforcement learning (RL), RLHF, and RLAIF, we aim to train AI agents that continuously evolve through dialogue and self-exploration.',
-      researchObjective: 'We specialize in building next-generation intelligent NPCs with personalized behavior and learning capabilities. Through techniques such as reinforcement learning (RL), RLHF (Reinforcement Learning from Human Feedback), and RLAIF (Reinforcement Learning from AI Feedback), we aim to train AI agents that continuously evolve through dialogue and self-exploration, embodying diverse personalities, styles, and expression strategies.',
-      researchFocus: [
-        'Application of reinforcement learning to interactive and behavior-based intelligent agents',
-        'Multi-personality modeling and control mechanisms',
-        'Fine-tuning using human or AI preferences (RLHF / RLAIF)',
-        'Multi-stage training workflows driven by self-reinforcement and generated data',
-        'Optimizing decision-making under multimodal inputs (language, actions, environments)'
+      description: 'Join our research team to build next-generation intelligent NPCs with personalized behavior and learning capabilities. Using reinforcement learning (RL), RLHF, and RLAIF techniques, you\'ll develop AI agents that continuously evolve through dialogue and self-exploration.',
+      responsibilities: [
+        'Apply reinforcement learning to interactive and behavior-based intelligent agents',
+        'Develop multi-personality modeling and control mechanisms',
+        'Implement fine-tuning using human or AI preferences (RLHF / RLAIF)',
+        'Design multi-stage training workflows with self-reinforcement',
+        'Optimize decision-making under multimodal inputs'
       ],
       requirements: [
-        'Research or development experience in reinforcement learning, language modeling, dialogue systems, or related fields',
-        'Expertise in at least one of the following areas: RLHF, RLAIF, PPO, SFT, multi-personality control, reward modeling',
-        'Proficiency in PyTorch or JAX, with strong coding practices',
-        'High self-motivation and the ability to drive independent research projects'
+        'Research or development experience in reinforcement learning, language modeling, or dialogue systems',
+        'Expertise in RLHF, RLAIF, PPO, SFT, multi-personality control, or reward modeling',
+        'Proficiency in PyTorch or JAX with strong coding practices',
+        'High self-motivation and ability to drive independent research projects'
       ],
       preferred: [
-        'Prior experience in generative AI or LLM (Large Language Model) development is highly valued'
+        'Prior experience in generative AI or LLM development',
+        'Publications in top-tier AI/ML conferences',
+        'Experience with large-scale distributed training'
       ],
-      benefits: [
-        'Monthly stipend up to ¥500,000 (based on skills and experience)',
-        'Generous access to GPU resources and computing support',
-        'Close collaboration opportunities with leading researchers',
-        'Freedom to explore independent research directions — exceptional results may be presented at top-tier conferences',
-        'Potential pathway to a full-time research position for outstanding interns'
-      ],
-      applicationEmail: 'hr-jp@shanda.com',
+      applicationEmail: 'hr_jp@shanda.com',
     },
     {
       id: 'research-engineer',
@@ -108,7 +97,7 @@ export default function Careers() {
         'Excellent programming competition results (ACM/ICPC, NOI/IOI, etc.)',
         'Experience in famous large model open-source projects or competition awards'
       ],
-      applicationEmail: 'hr-jp@shanda.com',
+      applicationEmail: 'hr_jp@shanda.com',
     }
   ]
 
@@ -172,10 +161,6 @@ export default function Careers() {
                           {position.type}
                         </span>
                         <span className="flex items-center">
-                          <DollarSign className="w-4 h-4 mr-1" />
-                          {position.salary}
-                        </span>
-                        <span className="flex items-center">
                           <MapPin className="w-4 h-4 mr-1" />
                           {position.location}
                         </span>
@@ -191,36 +176,6 @@ export default function Careers() {
                   <p className="text-gray-300 mb-6 leading-relaxed">
                     {position.description}
                   </p>
-
-                  {/* Special sections for NPC Internship */}
-                  {position.id === 'npc-intern' && (
-                    <>
-                      <div className="mb-8">
-                        <div className="flex items-center mb-4">
-                          <Target className="w-6 h-6 text-cyber-blue mr-2" />
-                          <h4 className="text-xl font-bold text-cyber-blue">Research Objective</h4>
-                        </div>
-                        <p className="text-gray-300 leading-relaxed">
-                          {position.researchObjective}
-                        </p>
-                      </div>
-
-                      <div className="mb-8">
-                        <div className="flex items-center mb-4">
-                          <Lightbulb className="w-6 h-6 text-cyber-blue mr-2" />
-                          <h4 className="text-xl font-bold text-cyber-blue">Research Focus</h4>
-                        </div>
-                        <ul className="space-y-2">
-                          {position.researchFocus?.map((focus, i) => (
-                            <li key={i} className="text-gray-300 text-sm flex items-start">
-                              <span className="w-2 h-2 bg-cyber-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                              {focus}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </>
-                  )}
 
                   {/* Requirements and Responsibilities */}
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
@@ -239,9 +194,7 @@ export default function Careers() {
                     )}
 
                     <div>
-                      <h4 className="text-lg font-bold text-cyber-blue mb-3">
-                        {position.id === 'npc-intern' ? 'Required Skills' : 'Basic Requirements'}
-                      </h4>
+                      <h4 className="text-lg font-bold text-cyber-blue mb-3">Basic Requirements</h4>
                       <ul className="space-y-2">
                         {position.requirements.map((req, i) => (
                           <li key={i} className="text-gray-300 text-sm flex items-start">
@@ -265,24 +218,6 @@ export default function Careers() {
                     </div>
                   </div>
 
-                  {/* Benefits section for NPC Internship */}
-                  {position.benefits && (
-                    <div className="mb-8">
-                      <div className="flex items-center mb-4">
-                        <Gift className="w-6 h-6 text-cyber-blue mr-2" />
-                        <h4 className="text-xl font-bold text-cyber-blue">Benefits & Compensation</h4>
-                      </div>
-                      <ul className="space-y-2">
-                        {position.benefits.map((benefit, i) => (
-                          <li key={i} className="text-gray-300 text-sm flex items-start">
-                            <span className="w-2 h-2 bg-cyber-green rounded-full mt-2 mr-2 flex-shrink-0"></span>
-                            {benefit}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-
                   {/* Application Section */}
                   <div className="p-6 bg-neural-gray/50 rounded-lg">
                     <h4 className="text-lg font-bold text-cyber-blue mb-3 flex items-center">
@@ -292,18 +227,9 @@ export default function Careers() {
                     <p className="text-gray-300 mb-2">
                       Send your resume to: <a href={`mailto:${position.applicationEmail}`} className="text-cyber-blue hover:underline">{position.applicationEmail}</a>
                     </p>
-                    {position.id === 'npc-intern' && (
-                      <div className="mt-4">
-                        <h5 className="font-semibold text-white mb-2 text-sm">Application Materials:</h5>
-                        <ul className="text-gray-300 text-sm space-y-1">
-                          <li>• Resume (including links to relevant projects or papers)</li>
-                          <li>• Links to representative projects or code (GitHub / publications)</li>
-                          <li>• Your available start date and preferred internship duration</li>
-                        </ul>
-                      </div>
-                    )}
+
                     <p className="text-gray-300 text-sm mt-2">
-                      Subject: 【{position.type === 'Internship' ? 'Intern' : position.title} Application-Name-School-Direction】
+                      Subject: 【{position.title} Application-Name-School-Direction】
                     </p>
                   </div>
                 </div>
@@ -337,7 +263,7 @@ export default function Careers() {
                 Get In Touch
               </button>
               <a 
-                href="mailto:research.ir@shanda.com"
+                href="mailto:hr_jp@shanda.com"
                 className="border border-cyber-blue text-cyber-blue px-8 py-3 hover:bg-cyber-blue hover:text-black transition-all duration-300"
               >
                 Send Resume

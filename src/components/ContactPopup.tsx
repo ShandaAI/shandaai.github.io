@@ -43,7 +43,7 @@ export default function ContactPopup({ isOpen, onClose }: ContactPopupProps) {
       
     } catch (error) {
       console.error('Error submitting form:', error)
-      alert('There was an error submitting your inquiry. Please try again or contact us directly at research.tokyo@shanda.com')
+      alert('There was an error submitting your inquiry. Please try again or contact us directly at hr_jp@shanda.com')
     } finally {
       setIsSubmitting(false)
     }
