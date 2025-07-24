@@ -21,7 +21,10 @@ const Footer = ({ onContactClick }: FooterProps) => {
                 height={88}
                 className="object-contain"
               />
-              <h3 className="text-lg font-bold glow-text-subtle">Shanda AI Research</h3>
+              <div>
+                <h3 className="text-lg font-bold glow-text-subtle">Shanda AI Research</h3>
+                <h3 className="text-lg font-bold glow-text-subtle">盛大グループ株式会社</h3>
+              </div>
             </div>
             <p className="text-gray-400 text-sm">
               Creating the Future with AI Technology
